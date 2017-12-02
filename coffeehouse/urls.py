@@ -25,8 +25,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^admin/doc', include('django.contrib.admindocs.urls')),
     url(r'^$', TemplateView.as_view(template_name='homepage.html')),
-    url(r'^about', about_views.contact),
-    url(r'^stores/', stores_views.detail),
-    url(r'^stores/(?P<store_id>\d+)/', stores_views.detail, {'location': 'headquarters'}),
-    url(r'^stores/(?P<store_id>\d+)/', stores_views.detail),
+    url(r'^about/', include('coffeehouse.about.urls')),
+    url(r'^stores/', include('coffeehouse.stores.urls'), {'location': 'headquarters'}),
 ]
