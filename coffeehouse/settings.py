@@ -27,7 +27,7 @@ SECRET_KEY = 'c1%$!(%p7%d*44+rpxzt1=!xbok6(7wp++v^2hlv%8=3=7@9#i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["pfdevelopment.pythonanywhere.com"]
+ALLOWED_HOSTS = ["pfdevelopment.pythonanywhere.com", "localhost"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'coffeehouse.about'
 ]
 
 MIDDLEWARE = [
