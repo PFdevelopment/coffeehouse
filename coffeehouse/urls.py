@@ -19,10 +19,12 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from coffeehouse.about import views as about_views
+from coffeehouse.stores import views as stores_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^admin/doc', include('django.contrib.admindocs.urls')),
     url(r'^$', TemplateView.as_view(template_name='homepage.html')),
     url(r'^about', about_views.contact),
+    url(r'^stores/(?P<store_id>\d+)/', stores_views.detail)
 ]
