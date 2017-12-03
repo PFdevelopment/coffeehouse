@@ -5,6 +5,16 @@
     <title></title>
   </head>
   <body>
-    <h4>Details</h4>
+    <h4>{{ store_name }} Store</h4>
+    <h5>Address:</h5>
+    <p>City: {{ store_address.city }}</p>
+    <p>Street: {{ store_address.street }}</p>
+    <p>State: {{ store_address.state }}</p>
+
+    <hr>
+
+    <p>We offer: {{ store_amenities.0 }} and {{ store_amenities.1 }}</p>
+
+    <p>Menu includes: {{ store_menu.1.1 }} and {{ store_menu.2.1 }}</p>
   </body>
 </html>
