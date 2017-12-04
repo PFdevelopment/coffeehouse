@@ -33,14 +33,15 @@ ALLOWED_HOSTS = ['pfdevelopment.pythonanywhere.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'coffeehouse.about',
-    'coffeehouse.stores',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'coffeehouse.about',
+    'coffeehouse.stores',
+    'coffeehouse',
 ]
 
 MIDDLEWARE = [
@@ -58,10 +59,10 @@ ROOT_URLCONF = 'coffeehouse.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['%s/templates/' % (PROJECT_DIR),],
+        'DIRS': [''],
         'APP_DIRS': True,
         'OPTIONS': {
-            'string_if_invalid': "**** WARNING INVALID VARIABLE %s ****",
+            # 'string_if_invalid': "**** WARNING INVALID VARIABLE %s ****",
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
