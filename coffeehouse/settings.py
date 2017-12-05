@@ -63,6 +63,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             # 'string_if_invalid': "**** WARNING INVALID VARIABLE %s ****",
+            # 'autoescape': False,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
